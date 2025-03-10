@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect</title>
+    <script>
+        // 从 URL 中提取 code 参数
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+
+        if (code) {
+            // 将 code 发送到后端或显示在页面上
+            console.log("Authorization Code:", code);
+            alert("Authorization Code: " + code);
+        } else {
+            console.log("No code found in URL.");
+            alert("No code found in URL.");
+        }
+    </script>
+</head>
+<body>
+    <h1>Redirect Page</h1>
+    <p>This page handles the OAuth 2.0 callback.</p >
+</body>
+</html>
